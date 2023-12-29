@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* ... (existing CSS code) */
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+}
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.left-column {
+    border-right: 1px solid #ddd;
+}
+
+/* ... (existing CSS code) */
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select, button {
+    margin-bottom: 16px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.operation {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.operation label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.operation input, .operation select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+.addition {
+    background-color: #e6ffe6; /* Light green for addition */
+}
+
+.withdrawal {
+    background-color: #ffe6e6; /* Light red for withdrawal */
+}
