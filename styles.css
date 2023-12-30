@@ -1,14 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: whitesmoke;
     margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
     padding: 0;
+    text-align: center;
+
+    /*background-image: url('trading.jpg');
+    background-size:100%; 
+    background-position: center;
+    background-repeat: no-repeat;*/
+
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #444444;
     color: #fff;
 }
 
@@ -26,13 +35,14 @@ p {
 
 .container {
     max-width: 1200px;
-    margin: 50px auto;
-    background-color: #fff;
+    margin: 30px auto;
+    background-color: #ffffff6b;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    text-align: center;
 }
 
 .left-column, .right-column {
@@ -60,14 +70,105 @@ input, select, button {
     box-sizing: border-box;
 }
 
-button {
+/*button {
     background-color: #4caf50;
     color: #fff;
     border: none;
     cursor: pointer;
+}*/
+/******************************************************/
+
+button {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --color: rgb(0, 152, 71);
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    transition: 1s;
+   }
+   
+   button::before, button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   button:hover::before, button:hover::after {
+    height: 410px;
+    width: 800px;
+   }
+   
+   button:hover {
+    color: white;
+   }
+   
+   button:active {
+    filter: brightness(.8);
+   }
+   
+
+
+
+/******************************************************/
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.creation{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /*background-color: #f9f9f9;*/
+    background-color: #ffffff6b;
+
 }
 
-.operation {
+.operation{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -75,23 +176,45 @@ button {
     background-color: #f9f9f9;
 }
 
-.operation label {
+/*
+.operation {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}*/
+
+/*.operation label {
     display: block;
     margin-bottom: 8px;
     color: #333;
-}
+}*/
 
 .operation input, .operation select {
-    width: calc(100% - 16px);
     padding: 8px;
     margin-bottom: 12px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    width:100px;
 }
+
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: wheat;
+}
+
+tr {
+    transition-duration: 0.5s;
+}
+tr:hover{
+    background-color: rgba(42, 95, 255, 0.282);
 }
 
 th, td {
@@ -105,9 +228,29 @@ th {
 }
 
 .addition {
-    background-color: #e6ffe6; /* Light green for addition */
+    background-color: rgb(0, 152, 71);
 }
 
 .withdrawal {
-    background-color: #ffe6e6; /* Light red for withdrawal */
+    background-color: #ff6060;
+}
+
+#finalBalanceSection{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /*background-color: #f9f9f9;*/
+    background-color: #ffffff6b;
+
+}
+
+img{
+    width:200px;
 }
